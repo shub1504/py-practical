@@ -1,0 +1,30 @@
+#Write a program to check iif a number is prime or not
+while True:
+    import math
+    n=int(input("Enter the number:"))
+    h= n/2+1
+    half=math.floor(h)
+    for i in range (1,half):
+        if n/i==0:
+            print(n,"is not a prime number")
+        else:
+            print(n,"is a prime number")
+    c=input("would you like to continue(Y/N):")
+    x= c.capitalize()
+    if x==Y:
+        continue
+    else:
+        print("Code executed successfully")
+        break
+
+
+
+'''output
+Enter the number:7
+7 is a prime number
+7 is a prime number
+7 is a prime number
+would you like to continue(Y/N):
+'''
+
+blob:https://web.whatsapp.com/43061452-6bf3-4426-900e-84d74da1e561
