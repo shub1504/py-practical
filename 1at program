@@ -1,0 +1,18 @@
+#To find the roots of quadratic equation
+import math
+a=int(input("Enter coefficient of x square:"))
+b=int(input("Enter coefficiient of x:"))
+c=int(input("Enter constant:"))
+d= (b**2)-4*a*c
+root1 = (-b + math.sqrt(d)) / (2 * a)
+root2 = (-b - math.sqrt(d)) / (2 * a)
+print("Roots of the quatiion are:",root1,"and",root2)         
+
+
+
+'''output
+Enter coefficient of x square:1
+Enter coefficiient of x:2
+Enter constant:1
+Roots of the quatiion are: -1.0 and -1.0
+'''
