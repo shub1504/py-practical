@@ -1,0 +1,37 @@
+#Write a program to swap the first n character of two strings
+def swap_first_n_chars(string1, string2, n):
+    if n > len(string1) or n > len(string2):
+        return "Error: Both strings must have at least n characters."
+
+    
+    swapped_string1 = string2[:n] + string1[n:]
+    swapped_string2 = string1[:n] + string2[n:]
+
+    return swapped_string1, swapped_string2
+
+
+string1 = input("Enter the first string: ")
+string2 = input("Enter the second string: ")
+n = int(input("Enter the number of characters to swap: "))
+
+
+result = swap_first_n_chars(string1, string2, n)
+if isinstance(result, str):  
+    print(result)
+else:
+    swapped_string1, swapped_string2 = result
+    print("Swapped strings:")
+    print("String 1:", swapped_string1)
+    print("String 2:", swapped_string2)
+
+
+
+'''output
+Enter the first string: myfirststring
+Enter the second string: mysecondstring
+Enter the number of characters to swap: 3
+Swapped strings:
+String 1: mysirststring
+String 2: myfecondstring
+'''
+
