@@ -1,0 +1,100 @@
+#writing a program that accepts a character
+#and print wheather the character is a letter or numeric digit or a special character
+while True:
+    def character(c):
+        if c.isalpha():
+           print(f"The character '{c}' is a letter.")
+        elif c.isdigit():
+           print(f"The character '{c}' is a numeric digit.")
+        else:
+           print(f"The character '{c}' is a special character.")
+
+
+    c = input("Enter a character: ")
+
+
+    if len(c) == 1:
+       character(c)
+    else:
+       print("Please enter only one character.")
+
+    c=input("Do you want to continue(Y/N):")
+    if c=='Y':
+        continue
+    else:
+        print("CODE EXECUTED SUCCESSFULLY")
+        break
+
+
+
+'''output
+Enter a character: D
+The character 'D' is a letter.
+Do you want to continue(Y/N):Y
+Enter a character: 3
+The character '3' is a numeric digit.
+Do you want to continue(Y/N):Y
+Enter a character: #
+The character '#' is a special character.
+Do you want to continue(Y/N):N
+CODE EXECUTED SUCCESSFULLY
+'''
+
+
+
+#Write a program to accept a character
+#and check if its a uppercase or lowercase
+def check_case(char):
+    if char.isupper():
+        print(f"The character '{char}' is uppercase.")
+    elif char.islower():
+        print(f"The character '{char}' is lowercase.")
+    else:
+        print(f"The character '{char}' is not a letter.")
+
+# Accepting user input
+char = input("Enter a character: ")
+
+# Check if the input is a single character
+if len(char) == 1:
+    check_case(char)
+else:
+    print("Please enter only one character.")
+
+
+
+
+'''output
+Enter a character: s
+The character 's' is lowercase.
+'''
+
+
+
+
+#Write a program to accept a character
+#and if the character is a digit it should give the output in alphabets
+def digit_to_word(digit):
+    digit_map = {
+        '0': "ZERO", '1': "ONE", '2': "TWO", '3': "THREE", '4': "FOUR",
+        '5': "FIVE", '6': "SIX", '7': "SEVEN", '8': "EIGHT", '9': "NINE"
+    }
+    
+    if digit.isdigit() and len(digit) == 1:
+        print(f"The word for the digit {digit} is: {digit_map[digit]}")
+    else:
+        print("Please enter a single digit between 0 and 9.")
+
+
+char = input("Enter a character: ")
+
+
+digit_to_word(char)
+
+
+
+'''output
+Enter a character: 5
+The word for the digit 5 is: FIVE
+'''
+
