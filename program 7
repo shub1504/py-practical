@@ -1,0 +1,40 @@
+#write a function that accepts two strings and return the indices of all the occurence
+#of the second string in the first string as a list
+#if the second string is not present in the first string then it should return -1
+def find_all_occurrences(string, substring):
+    indices = []
+    start = 0  # Starting index for searching
+    
+    while True:
+        # Find the index of the substring in the string starting from 'start'
+        index = string.find(substring, start)
+        
+        # If substring is not found, break the loop
+        if index == -1:
+            break
+        
+        # Add the found index to the list
+        indices.append(index)
+        
+        # Move the start position ahead to search for the next occurrence
+        start = index + 1
+    
+    # Return indices list or -1 if no occurrences are found
+    return indices if indices else -1
+
+# Example usage
+string = input("Enter the main string: ")
+substring = input("Enter the substring to find: ")
+
+result = find_all_occurrences(string, substring)
+print("Indices of occurrences:", result)
+
+
+
+
+
+'''output
+Enter the main string: python codes are awesome 
+Enter the substring to find: codes are
+Indices of occurrences: [7]
+'''
