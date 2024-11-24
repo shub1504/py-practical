@@ -1,0 +1,111 @@
+ #Write a program to find the frequency of a character in a string
+def find_frequency(string, char):
+    frequency = string.count(char)
+    return frequency
+
+
+string = input("Enter a string: ")
+char = input("Enter the character to find its frequency: ")
+
+
+if len(char) == 1:
+    frequency = find_frequency(string, char)
+    print(f"The character '{char}' appears {frequency} times in the string.")
+else:
+    print("Please enter exactly one character to find its frequency.")
+
+
+
+'''output
+Enter a string: my first python code 
+Enter the character to find its frequency: y
+The character 'y' appears 2 times in the string.
+'''
+
+
+
+#Write a program to replace a character from another character
+def replace_character(string, old_char, new_char):
+    updated_string = string.replace(old_char, new_char)
+    return updated_string
+
+
+string = input("Enter a string: ")
+old_char = input("Enter the character to be replaced: ")
+new_char = input("Enter the character to replace with: ")
+
+
+if len(old_char) == 1 and len(new_char) == 1:
+    updated_string = replace_character(string, old_char, new_char)
+    print(f"Updated string: {updated_string}")
+else:
+    print("Please enter exactly one character for both old and new characters.")
+
+
+
+'''output
+Enter a string: my first python code
+Enter the character to be replaced: s
+Enter the character to replace with: y
+Updated string: my firyt python code
+'''
+
+
+
+
+#Write a program to accept a string
+#and remove the first occurence of a character in a string
+def remove_first_occurrence(string, char_to_remove):
+    index = string.find(char_to_remove)
+    
+
+    if index != -1:
+
+        modified_string = string[:index] + string[index+1:]
+    else:
+
+        modified_string = string
+    
+    return modified_string
+
+
+input_string = input("Enter a string: ")
+char_to_remove = input("Enter the character to remove: ")
+
+result = remove_first_occurrence(input_string, char_to_remove)
+print("Modified string:", result)
+
+
+
+'''output
+Enter a string: my first python code 
+Enter the character to remove: y
+Modified string: m first python code
+'''
+
+
+
+
+
+#Write a program to accept a string
+#and remove all occurence of a character in a string
+def remove_all_occurrences(string, char_to_remove):
+    
+    modified_string = string.replace(char_to_remove, "")
+    return modified_string
+
+
+input_string = input("Enter a string: ")
+char_to_remove = input("Enter the character to remove: ")
+
+
+result = remove_all_occurrences(input_string, char_to_remove)
+print("Modified string:", result)
+
+
+
+'''output
+Enter a string: my first python code
+Enter the character to remove: o
+Modified string: my first pythn cde
+'''
